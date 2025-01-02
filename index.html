@@ -43,6 +43,42 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Row</title>
+  <style>
+    .video-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 10px;
+    }
+
+    .video-row video {
+      width: 19%;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .video-row {
+        flex-wrap: wrap;
+      }
+      .video-row video {
+        width: 48%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .video-row video {
+        width: 100%;
+      }
+    }
+  </style>
+  
 </head>
 <body>
 
