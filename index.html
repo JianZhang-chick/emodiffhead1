@@ -100,23 +100,26 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <img src="static/images/fig1.png" alt="MY ALT TEXT" style="width: 100%; max-width: 600px; height: auto;"/>
+          <h2 class="subtitle has-text-centered">Overview of our EMOdiffhead Model.</h2>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    bulmaCarousel.attach("#results-carousel", {
+      slidesToShow: 1, // 确保只显示一张图片
+      infinite: false, // 禁止循环滚动
+    });
+  });
+</script>
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -135,31 +138,22 @@
 </section>
 <!-- End paper abstract -->
 
-
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <img src="static/fig1.png" alt="MY ALT TEXT" style="width: 100%; max-width: 600px; height: auto;"/>
-          <h2 class="subtitle has-text-centered">Overview of our EMOdiffhead Model.</h2>
-        </div>
-      </div>
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      </h2>
     </div>
   </div>
 </section>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    bulmaCarousel.attach("#results-carousel", {
-      slidesToShow: 1, // 确保只显示一张图片
-      infinite: false, // 禁止循环滚动
-    });
-  });
-</script>
-
-
-
-
+<!-- End teaser video -->
 
 <!-- Youtube video -->
 <section class="hero is-small is-light">
