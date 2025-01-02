@@ -46,8 +46,9 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Videos with Titles</title>
+  <title>Combined Video Sections</title>
   <style>
+    /* 样式 1: 用于视频段落 */
     .video-section {
       margin-bottom: 20px; /* 各视频组之间的间距 */
     }
@@ -61,7 +62,7 @@
 
     .video-grid {
       display: grid; /* 使用网格布局 */
-      grid-template-columns: repeat(10, 1fr); /* 每行 5 列 */
+      grid-template-columns: repeat(10, 1fr); /* 每行 10 列 */
       grid-gap: 10px; /* 设置网格间距 */
       justify-items: center; /* 水平居中对齐 */
       align-items: start; /* 垂直顶部对齐 */
@@ -85,7 +86,7 @@
   </style>
 
   <style>
-    /* 外部容器，用于放置三个子模块 */
+    /* 样式 2: 用于模块化容器 */
     .module-container {
       display: flex; /* 使用 Flexbox 实现水平排列 */
       justify-content: space-between; /* 在容器内均匀分布子模块 */
@@ -100,7 +101,6 @@
       box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
     }
 
-    /* 子模块标题 */
     .module-title {
       text-align: center; /* 标题居中 */
       font-size: 18px;
@@ -109,14 +109,14 @@
     }
 
     /* 子模块中的视频网格布局 */
-    .video-grid {
+    .module .video-grid {
       display: grid; /* 使用 Grid 布局 */
       grid-template-columns: repeat(3, 1fr); /* 每行 3 列 */
       grid-gap: 10px; /* 视频之间的间距 */
     }
 
     /* 视频样式 */
-    .video-grid video {
+    .module .video-grid video {
       width: 100%; /* 视频占满单元格宽度 */
       height: auto; /* 自动调整高度，保持宽高比 */
       border: 1px solid #ccc; /* 视频边框 */
@@ -214,45 +214,46 @@
   <div class="video-section">
     <h2 class="video-title">Happy Videos</h2>
     <div class="container video-grid">
+      <!-- 视频列表 -->
       <div class="video-item">
         <video src="static/videos/happy/0.1_out.mp4" controls muted loop></video>
         <p class="title">Strength: 0.1</p>
       </div>
       <div class="video-item">
         <video src="static/videos/happy/0.2_out.mp4" controls muted loop></video>
-        <p class="title">0.2</p>
+        <p class="title">Strength: 0.2</p>
       </div>
       <div class="video-item">
         <video src="static/videos/happy/0.3_out.mp4" controls muted loop></video>
-        <p class="title">0.3</p>
+        <p class="title">Strength: 0.3</p>
       </div>
       <div class="video-item">
         <video src="static/videos/happy/0.4_out.mp4" controls muted loop></video>
-        <p class="title">0.4</p>
+        <p class="title">Strength: 0.4</p>
       </div>
       <div class="video-item">
         <video src="static/videos/happy/0.5_out.mp4" controls muted loop></video>
-        <p class="title">0.5</p>
+        <p class="title">Strength: 0.5</p>
       </div>
       <div class="video-item">
         <video src="static/videos/happy/0.6_out.mp4" controls muted loop></video>
-        <p class="title">0.6</p>
+        <p class="title">Strength: 0.6</p>
       </div>
       <div class="video-item">
         <video src="static/videos/happy/0.7_out.mp4" controls muted loop></video>
-        <p class="title">0.7</p>
+        <p class="title">Strength: 0.7</p>
       </div>
       <div class="video-item">
         <video src="static/videos/happy/0.8_out.mp4" controls muted loop></video>
-        <p class="title">0.8</p>
+        <p class="title">Strength: 0.8</p>
       </div>
       <div class="video-item">
         <video src="static/videos/happy/0.9_out.mp4" controls muted loop></video>
-        <p class="title">0.9</p>
+        <p class="title">Strength: 0.9</p>
       </div>
       <div class="video-item">
         <video src="static/videos/happy/1.0_out.mp4" controls muted loop></video>
-        <p class="title">1.0</p>
+        <p class="title">Strength: 1.0</p>
       </div>
     </div>
   </div>
@@ -261,62 +262,82 @@
   <div class="video-section">
     <h2 class="video-title">Sad Videos</h2>
     <div class="container video-grid">
+      <!-- 视频列表 -->
       <div class="video-item">
         <video src="static/videos/sad/0.1_out.mp4" controls muted loop></video>
         <p class="title">Strength: 0.1</p>
       </div>
       <div class="video-item">
         <video src="static/videos/sad/0.2_out.mp4" controls muted loop></video>
-        <p class="title">0.2</p>
+        <p class="title">Strength: 0.2</p>
       </div>
       <div class="video-item">
         <video src="static/videos/sad/0.3_out.mp4" controls muted loop></video>
-        <p class="title">0.3</p>
+        <p class="title">Strength: 0.3</p>
       </div>
       <div class="video-item">
         <video src="static/videos/sad/0.4_out.mp4" controls muted loop></video>
-        <p class="title">0.4</p>
+        <p class="title">Strength: 0.4</p>
       </div>
       <div class="video-item">
         <video src="static/videos/sad/0.5_out.mp4" controls muted loop></video>
-        <p class="title">0.5</p>
+        <p class="title">Strength: 0.5</p>
       </div>
       <div class="video-item">
         <video src="static/videos/sad/0.6_out.mp4" controls muted loop></video>
-        <p class="title">0.6</p>
+        <p class="title">Strength: 0.6</p>
       </div>
       <div class="video-item">
         <video src="static/videos/sad/0.7_out.mp4" controls muted loop></video>
-        <p class="title">0.7</p>
+        <p class="title">Strength: 0.7</p>
       </div>
       <div class="video-item">
         <video src="static/videos/sad/0.8_out.mp4" controls muted loop></video>
-        <p class="title">0.8</p>
+        <p class="title">Strength: 0.8</p>
       </div>
       <div class="video-item">
         <video src="static/videos/sad/0.9_out.mp4" controls muted loop></video>
-        <p class="title">0.9</p>
+        <p class="title">Strength: 0.9</p>
       </div>
       <div class="video-item">
         <video src="static/videos/sad/1.0_out.mp4" controls muted loop></video>
-        <p class="title">1.0</p>
+        <p class="title">Strength: 1.0</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- 模块化视频容器 -->
 <section class="section">
   <div class="container module-container">
     <!-- 第一个子模块 -->
     <div class="module">
       <h2 class="module-title">Module 1</h2>
       <div class="video-grid">
-        <video src="static/videos/one-shot/A/4_0.5_out.mp4" controls muted loop></video>
-        <video src="static/videos/one-shot/A/4_1_out.mp4" controls muted loop></video>
-        <video src="static/videos/one-shot/A/4_1.5_out.mp4" controls muted loop></video>
-        <video src="static/videos/one-shot/A/6_0.5_out.mp4" controls muted loop></video>
-        <video src="static/videos/one-shot/A/6_1_out.mp4" controls muted loop></video>
-        <video src="static/videos/one-shot/A/6_1.5_out.mp4" controls muted loop></video>
+        <div class="video-item">
+          <video src="static/videos/one-shot/A/4_0.5_out.mp4" controls muted loop></video>
+          <p class="title">Strength: 0.5</p>
+        </div>
+        <div class="video-item">
+          <video src="static/videos/one-shot/A/4_1_out.mp4" controls muted loop></video>
+          <p class="title">Strength: 1.0</p>
+        </div>
+        <div class="video-item">
+          <video src="static/videos/one-shot/A/4_1.5_out.mp4" controls muted loop></video>
+          <p class="title">Strength: 1.5</p>
+        </div>
+        <div class="video-item">
+          <video src="static/videos/one-shot/A/6_0.5_out.mp4" controls muted loop></video>
+          <p class="title">Strength: 0.5</p>
+        </div>
+        <div class="video-item">
+          <video src="static/videos/one-shot/A/6_1_out.mp4" controls muted loop></video>
+          <p class="title">Strength: 1.0</p>
+        </div>
+        <div class="video-item">
+          <video src="static/videos/one-shot/A/6_1.5_out.mp4" controls muted loop></video>
+          <p class="title">Strength: 1.5</p>
+        </div>
       </div>
     </div>
 
@@ -324,12 +345,30 @@
     <div class="module">
       <h2 class="module-title">Module 2</h2>
       <div class="video-grid">
-        <video src="static/videos/one-shot/B/4_0.5_out.mp4" controls muted loop></video>
-        <video src="static/videos/one-shot/B/4_1_out.mp4" controls muted loop></video>
-        <video src="static/videos/one-shot/B/4_1.5_out.mp4" controls muted loop></video>
-        <video src="static/videos/one-shot/B/6_0.5_out.mp4" controls muted loop></video>
-        <video src="static/videos/one-shot/B/6_1_out.mp4" controls muted loop></video>
-        <video src="static/videos/one-shot/B/6_1.5_out.mp4" controls muted loop></video>
+        <div class="video-item">
+          <video src="static/videos/one-shot/B/4_0.5_out.mp4" controls muted loop></video>
+          <p class="title">Strength: 0.5</p>
+        </div>
+        <div class="video-item">
+          <video src="static/videos/one-shot/B/4_1_out.mp4" controls muted loop></video>
+          <p class="title">Strength: 1.0</p>
+        </div>
+        <div class="video-item">
+          <video src="static/videos/one-shot/B/4_1.5_out.mp4" controls muted loop></video>
+          <p class="title">Strength: 1.5</p>
+        </div>
+        <div class="video-item">
+          <video src="static/videos/one-shot/B/6_0.5_out.mp4" controls muted loop></video>
+          <p class="title">Strength: 0.5</p>
+        </div>
+        <div class="video-item">
+          <video src="static/videos/one-shot/B/6_1_out.mp4" controls muted loop></video>
+          <p class="title">Strength: 1.0</p>
+        </div>
+        <div class="video-item">
+          <video src="static/videos/one-shot/B/6_1.5_out.mp4" controls muted loop></video>
+          <p class="title">Strength: 1.5</p>
+        </div>
       </div>
     </div>
 
@@ -337,16 +376,35 @@
     <div class="module">
       <h2 class="module-title">Module 3</h2>
       <div class="video-grid">
-        <video src="static/videos/one-shot/C/4_0.5_out.mp4" controls muted loop></video>
-        <video src="static/videos/one-shot/C/4_1_out.mp4" controls muted loop></video>
-        <video src="static/videos/one-shot/C/4_1.5_out.mp4" controls muted loop></video>
-        <video src="static/videos/one-shot/C/6_0.5_out.mp4" controls muted loop></video>
-        <video src="static/videos/one-shot/C/6_1_out.mp4" controls muted loop></video>
-        <video src="static/videos/one-shot/C/6_1.5_out.mp4" controls muted loop></video>
+        <div class="video-item">
+          <video src="static/videos/one-shot/C/4_0.5_out.mp4" controls muted loop></video>
+          <p class="title">Strength: 0.5</p>
+        </div>
+        <div class="video-item">
+          <video src="static/videos/one-shot/C/4_1_out.mp4" controls muted loop></video>
+          <p class="title">Strength: 1.0</p>
+        </div>
+        <div class="video-item">
+          <video src="static/videos/one-shot/C/4_1.5_out.mp4" controls muted loop></video>
+          <p class="title">Strength: 1.5</p>
+        </div>
+        <div class="video-item">
+          <video src="static/videos/one-shot/C/6_0.5_out.mp4" controls muted loop></video>
+          <p class="title">Strength: 0.5</p>
+        </div>
+        <div class="video-item">
+          <video src="static/videos/one-shot/C/6_1_out.mp4" controls muted loop></video>
+          <p class="title">Strength: 1.0</p>
+        </div>
+        <div class="video-item">
+          <video src="static/videos/one-shot/C/6_1.5_out.mp4" controls muted loop></video>
+          <p class="title">Strength: 1.5</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- BibTex citation -->
 <section class="section" id="BibTeX">
