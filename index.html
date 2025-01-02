@@ -46,36 +46,22 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Row</title>
+  <title>Two Rows of Videos</title>
   <style>
-    .video-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: nowrap;
-      gap: 10px;
+    /* 视频网格容器样式 */
+    .video-grid {
+      display: grid; /* 启用网格布局 */
+      grid-template-columns: repeat(5, 1fr); /* 每行 5 列 */
+      grid-gap: 10px; /* 设置网格间距 */
+      justify-items: center; /* 水平居中对齐每个视频 */
+      align-items: center; /* 垂直居中对齐每个视频 */
     }
 
-    .video-row video {
-      width: 19%;
-      height: auto;
-      border-radius: 5px;
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-    }
-
-    @media (max-width: 768px) {
-      .video-row {
-        flex-wrap: wrap;
-      }
-      .video-row video {
-        width: 48%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .video-row video {
-        width: 100%;
-      }
+    /* 视频样式 */
+    .video-grid video {
+      width: 100%; /* 视频宽度占满单元格 */
+      max-width: 150px; /* 限制视频的最大宽度 */
+      height: auto; /* 自动调整高度以保持宽高比 */
     }
   </style>
   
@@ -163,7 +149,7 @@
 <!-- End paper abstract -->
 
 <section class="section">
-  <div class="container video-row">
+  <div class="container video-grid">
     <!-- 视频 1 -->
     <video src="static/videos/carousel1.mp4" controls autoplay muted loop style="width: 150px; height: 100px;"></video>
     <!-- 视频 2 -->
@@ -180,42 +166,6 @@
     <video src="static/videos/carousel3.mp4" controls autoplay muted loop style="width: 150px; height: 100px;"></video>
     <!-- 视频 4 -->
     <video src="static/videos/banner_video.mp4" controls autoplay muted loop style="width: 150px; height: 100px;"></video>
-  </div>
-</section>
-<section class="section">
-  <div class="container video-row">
-    <!-- 视频 1 -->
-    <video src="static/videos/carousel1.mp4" controls autoplay muted loop style="width: 150px; height: 100px;"></video>
-    <!-- 视频 2 -->
-    <video src="static/videos/carousel2.mp4" controls autoplay muted loop style="width: 150px; height: 100px;"></video>
-    <!-- 视频 3 -->
-    <video src="static/videos/carousel3.mp4" controls autoplay muted loop style="width: 150px; height: 100px;"></video>
-    <!-- 视频 4 -->
-    <video src="static/videos/banner_video.mp4" controls autoplay muted loop style="width: 150px; height: 100px;"></video>
-    <!-- 视频 1 -->
-    <video src="static/videos/carousel1.mp4" controls autoplay muted loop style="width: 150px; height: 100px;"></video>
-    <!-- 视频 2 -->
-    <video src="static/videos/carousel2.mp4" controls autoplay muted loop style="width: 150px; height: 100px;"></video>
-    <!-- 视频 3 -->
-    <video src="static/videos/carousel3.mp4" controls autoplay muted loop style="width: 150px; height: 100px;"></video>
-    <!-- 视频 4 -->
-    <video src="static/videos/banner_video.mp4" controls autoplay muted loop style="width: 150px; height: 100px;"></video>
-  </div>
-</section>
-<section class="section">
-  <div class="container video-row">
-    <!-- 视频 1 -->
-    <video src="static/videos/carousel1.mp4" controls autoplay muted loop style="width: 150px; height: 100px;"></video>
-    <!-- 视频 2 -->
-    <video src="static/videos/carousel2.mp4" controls autoplay muted loop style="width: 150px; height: 100px;"></video>
-    <!-- 视频 3 -->
-    <video src="static/videos/carousel3.mp4" controls autoplay muted loop style="width: 150px; height: 100px;"></video>
-    <!-- 视频 4 -->
-    <video src="static/videos/banner_video.mp4" controls autoplay muted loop style="width: 150px; height: 100px;"></video>
-    <!-- 视频 1 -->
-    <video src="static/videos/carousel1.mp4" controls autoplay muted loop style="width: 150px; height: 100px;"></video>
-    <!-- 视频 2 -->
-    <video src="static/videos/carousel2.mp4" controls autoplay muted loop style="width: 150px; height: 100px;"></video>
     <!-- 视频 3 -->
     <video src="static/videos/carousel3.mp4" controls autoplay muted loop style="width: 150px; height: 100px;"></video>
     <!-- 视频 4 -->
