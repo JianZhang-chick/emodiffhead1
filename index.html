@@ -221,7 +221,7 @@
   <h1 class="main-title">Overview</h1>
   <div class="hero-body">
     <div class="container has-text-centered">
-      <img src="static/images/fig1.png" alt="Overview of our EMOdiffhead Model." style="width: 1000px; height: auto;"/>
+      <img src="static/images/fig1.png" alt="Overview of our EMOdiffhead Model." style="width: 1350px; height: auto;"/>
       <h2 class="subtitle" style="text-align: left;">
         Overview of our EMOdiffhead Model. Given an emotion label with a specified intensity, our method first generates FLAME-based expression vectors. Next, these vectors are then combined with a reference image and audio to condition the diffusion model for generating the target video. (a) Backbone Network: The time-based diffusion model receives image, audio, and expression vector input to synthesize the target video. (b) ReferenceNet: Another UNet with a similar structure to the backbone network is used to extract features of a reference image for maintaining identity consistency. (c) Emotion Editing Condition Generation Module: Manually specify emotion category and intensity. During inference, the editing direction between the target non-neutral emotion and the neural emotion and intensity value are utilized to obtain the final expression vectors.
       </h2>
