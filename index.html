@@ -83,6 +83,45 @@
       color: #333; /* 标题颜色 */
     }
   </style>
+
+  <style>
+    /* 外部容器，用于放置三个子模块 */
+    .module-container {
+      display: flex; /* 使用 Flexbox 实现水平排列 */
+      justify-content: space-between; /* 在容器内均匀分布子模块 */
+      gap: 20px; /* 子模块之间的间距 */
+    }
+
+    /* 每个子模块样式 */
+    .module {
+      flex: 1; /* 每个模块占相等宽度 */
+      border: 1px solid #ddd; /* 子模块边框 */
+      padding: 10px; /* 子模块内边距 */
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    }
+
+    /* 子模块标题 */
+    .module-title {
+      text-align: center; /* 标题居中 */
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px; /* 标题与内容的间距 */
+    }
+
+    /* 子模块中的视频网格布局 */
+    .video-grid {
+      display: grid; /* 使用 Grid 布局 */
+      grid-template-columns: repeat(3, 1fr); /* 每行 3 列 */
+      grid-gap: 10px; /* 视频之间的间距 */
+    }
+
+    /* 视频样式 */
+    .video-grid video {
+      width: 100%; /* 视频占满单元格宽度 */
+      height: auto; /* 自动调整高度，保持宽高比 */
+      border: 1px solid #ccc; /* 视频边框 */
+    }
+  </style>
   
 </head>
 <body>
@@ -267,6 +306,49 @@
 </section>
 
 <section class="section">
+  <div class="container module-container">
+    <!-- 第一个子模块 -->
+    <div class="module">
+      <h2 class="module-title">Module 1</h2>
+      <div class="video-grid">
+        <video src="static/videos/one-shot/A/4_0.5_out.mp4" controls muted loop></video>
+        <video src="static/videos/one-shot/A/4_1_out.mp4" controls muted loop></video>
+        <video src="static/videos/one-shot/A/4_1.5_out.mp4" controls muted loop></video>
+        <video src="static/videos/one-shot/A/6_0.5_out.mp4" controls muted loop></video>
+        <video src="static/videos/one-shot/A/6_1_out.mp4" controls muted loop></video>
+        <video src="static/videos/one-shot/A/6_1.5_out.mp4" controls muted loop></video>
+      </div>
+    </div>
+
+    <!-- 第二个子模块 -->
+    <div class="module">
+      <h2 class="module-title">Module 2</h2>
+      <div class="video-grid">
+        <video src="static/videos/one-shot/B/4_0.5_out.mp4" controls muted loop></video>
+        <video src="static/videos/one-shot/B/4_1_out.mp4" controls muted loop></video>
+        <video src="static/videos/one-shot/B/4_1.5_out.mp4" controls muted loop></video>
+        <video src="static/videos/one-shot/B/6_0.5_out.mp4" controls muted loop></video>
+        <video src="static/videos/one-shot/B/6_1_out.mp4" controls muted loop></video>
+        <video src="static/videos/one-shot/B/6_1.5_out.mp4" controls muted loop></video>
+      </div>
+    </div>
+
+    <!-- 第三个子模块 -->
+    <div class="module">
+      <h2 class="module-title">Module 3</h2>
+      <div class="video-grid">
+        <video src="static/videos/one-shot/C/4_0.5_out.mp4" controls muted loop></video>
+        <video src="static/videos/one-shot/C/4_1_out.mp4" controls muted loop></video>
+        <video src="static/videos/one-shot/C/4_1.5_out.mp4" controls muted loop></video>
+        <video src="static/videos/one-shot/C/6_0.5_out.mp4" controls muted loop></video>
+        <video src="static/videos/one-shot/C/6_1_out.mp4" controls muted loop></video>
+        <video src="static/videos/one-shot/C/6_1.5_out.mp4" controls muted loop></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <!-- 第一组视频 -->
   <div class="video-section">
     <h2 class="video-title">Happy Videos</h2>
@@ -304,7 +386,7 @@
         <p class="title">2/3</p>
       </div>
       <div class="video-item">
-        <video src="static/videos/one-shot/C/4_1_out.mp4" controls muted loop></video>
+        <video src="static/videos/one-shot/C/4_1.5_out.mp4" controls muted loop></video>
         <p class="title">1</p>
       </div>
     </div>
@@ -347,7 +429,7 @@
         <p class="title">2/3</p>
       </div>
       <div class="video-item">
-        <video src="static/videos/one-shot/C/6_1_out.mp4" controls muted loop></video>
+        <video src="static/videos/one-shot/C/6_1.5_out.mp4" controls muted loop></video>
         <p class="title">1</p>
       </div>
     </div>
