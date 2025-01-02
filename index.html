@@ -136,24 +136,26 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item">
-          <!-- Your image here -->
-          <img src="static/images/fig1.png" alt="MY ALT TEXT"/>
-          <h2 class="subtitle has-text-centered">
-            Overview of our EMOdiffhead Model.
-          </h2>
+          <img src="static/fig1.png" alt="MY ALT TEXT" style="width: 100%; max-width: 600px; height: auto;"/>
+          <h2 class="subtitle has-text-centered">Overview of our EMOdiffhead Model.</h2>
         </div>
-        <!-- Other items removed or commented out -->
       </div>
     </div>
   </div>
 </section>
-<!-- End image carousel -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    bulmaCarousel.attach("#results-carousel", {
+      slidesToShow: 1, // 确保只显示一张图片
+      infinite: false, // 禁止循环滚动
+    });
+  });
+</script>
 
 
 
