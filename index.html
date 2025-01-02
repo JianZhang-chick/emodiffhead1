@@ -47,21 +47,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Two Rows of Videos</title>
+
   <style>
-    /* 视频网格容器样式 */
     .video-grid {
-      display: grid; /* 启用网格布局 */
+      display: grid; /* 使用网格布局 */
       grid-template-columns: repeat(10, 1fr); /* 每行 5 列 */
-      grid-gap: 1px; /* 设置网格间距 */
-      justify-items: center; /* 水平居中对齐每个视频 */
-      align-items: center; /* 垂直居中对齐每个视频 */
+      grid-gap: 10px; /* 设置网格间距 */
+      justify-items: center; /* 水平居中对齐 */
+      align-items: start; /* 垂直顶部对齐 */
     }
 
-    /* 视频样式 */
-    .video-grid video {
-      width: 100%; /* 视频宽度占满单元格 */
-      max-width: 100px; /* 限制视频的最大宽度 */
-      height: auto; /* 自动调整高度以保持宽高比 */
+    .video-item {
+      text-align: center; /* 文本水平居中 */
+    }
+
+    .video-item video {
+      width: 100%;
+      max-width: 150px; /* 视频最大宽度 */
+      height: auto;
+      display: block; /* 让视频独占一行 */
+    }
+
+    .video-item .title {
+      margin-top: 5px; /* 标题与视频之间的间距 */
+      font-size: 14px; /* 标题字体大小 */
+      color: #333; /* 标题颜色 */
     }
   </style>
   
@@ -150,47 +160,86 @@
 
 <section class="section">
   <div class="container video-grid">
-    <!-- 视频 1 -->
-    <video src="static/videos/happy/0.1_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
-    <!-- 视频 2 -->
-    <video src="static/videos/happy/0.2_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
-    <!-- 视频 3 -->
-    <video src="static/videos/happy/0.3_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
-    <!-- 视频 4 -->
-    <video src="static/videos/happy/0.4_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
-    <!-- 视频 5 -->
-    <video src="static/videos/happy/0.5_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
-    <!-- 视频 6 -->
-    <video src="static/videos/happy/0.6_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
-    <!-- 视频 7 -->
-    <video src="static/videos/happy/0.7_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
-    <!-- 视频 8 -->
-    <video src="static/videos/happy/0.8_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
-    <!-- 视频 9 -->
-    <video src="static/videos/happy/0.9_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
-    <!-- 视频 10 -->
-    <video src="static/videos/happy/1.0_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
-
-    <!-- 视频 1 -->
-    <video src="static/videos/sad/0.1_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
-    <!-- 视频 2 -->
-    <video src="static/videos/sad/0.2_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
-    <!-- 视频 3 -->
-    <video src="static/videos/sad/0.3_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
-    <!-- 视频 4 -->
-    <video src="static/videos/sad/0.4_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
-    <!-- 视频 5 -->
-    <video src="static/videos/sad/0.5_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
-    <!-- 视频 6 -->
-    <video src="static/videos/sad/0.6_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
-    <!-- 视频 7 -->
-    <video src="static/videos/sad/0.7_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
-    <!-- 视频 8 -->
-    <video src="static/videos/sad/0.8_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
-    <!-- 视频 9 -->
-    <video src="static/videos/sad/0.9_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
-    <!-- 视频 10 -->
-    <video src="static/videos/sad/1.0_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+    <!-- 每个视频加标题 -->
+    <div class="video-item">
+      <video src="static/videos/happy/0.1_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+      <p class="title">Video 1 Title</p>
+    </div>
+    <div class="video-item">
+      <video src="static/videos/happy/0.2_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+      <p class="title">Video 2 Title</p>
+    </div>
+    <div class="video-item">
+      <video src="static/videos/happy/0.3_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+      <p class="title">Video 3 Title</p>
+    </div>
+    <div class="video-item">
+      <video src="static/videos/happy/0.4_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+      <p class="title">Video 4 Title</p>
+    </div>
+    <div class="video-item">
+      <video src="static/videos/happy/0.5_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+      <p class="title">Video 5 Title</p>
+    </div>
+    <div class="video-item">
+      <video src="static/videos/happy/0.6_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+      <p class="title">Video 6 Title</p>
+    </div>
+    <div class="video-item">
+      <video src="static/videos/happy/0.7_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+      <p class="title">Video 7 Title</p>
+    </div>
+    <div class="video-item">
+      <video src="static/videos/happy/0.8_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+      <p class="title">Video 8 Title</p>
+    </div>
+    <div class="video-item">
+      <video src="static/videos/happy/0.9_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+      <p class="title">Video 9 Title</p>
+    </div>
+    <div class="video-item">
+      <video src="static/videos/happy/1.0_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+      <p class="title">Video 10 Title</p>
+    <div class="video-item">
+      <video src="static/videos/sad/0.1_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+      <p class="title">Video 1 Title</p>
+    </div>
+    <div class="video-item">
+      <video src="static/videos/sad/0.2_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+      <p class="title">Video 2 Title</p>
+    </div>
+    <div class="video-item">
+      <video src="static/videos/sad/0.3_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+      <p class="title">Video 3 Title</p>
+    </div>
+    <div class="video-item">
+      <video src="static/videos/sad/0.4_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+      <p class="title">Video 4 Title</p>
+    </div>
+    <div class="video-item">
+      <video src="static/videos/sad/0.5_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+      <p class="title">Video 5 Title</p>
+    </div>
+    <div class="video-item">
+      <video src="static/videos/sad/0.6_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+      <p class="title">Video 6 Title</p>
+    </div>
+    <div class="video-item">
+      <video src="static/videos/sad/0.7_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+      <p class="title">Video 7 Title</p>
+    </div>
+    <div class="video-item">
+      <video src="static/videos/sad/0.8_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+      <p class="title">Video 8 Title</p>
+    </div>
+    <div class="video-item">
+      <video src="static/videos/sad/0.9_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+      <p class="title">Video 9 Title</p>
+    </div>
+    <div class="video-item">
+      <video src="static/videos/sad/1.0_out.mp4" controls autoplay muted loop style="width: 100px; height: 100px;"></video>
+      <p class="title">Video 10 Title</p>
+    </div>
   </div>
 </section>
   
